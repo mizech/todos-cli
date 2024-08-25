@@ -11,6 +11,10 @@
 		4C3520902C7AF9A1007C825B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35208F2C7AF9A1007C825B /* Todo.swift */; };
 		4C3520922C7AFB77007C825B /* TodosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3520912C7AFB77007C825B /* TodosManager.swift */; };
 		4C3520942C7AFBB0007C825B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3520932C7AFBB0007C825B /* App.swift */; };
+		4C3520962C7B1893007C825B /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3520952C7B1893007C825B /* Cache.swift */; };
+		4C35209C2C7B1B9C007C825B /* FileSystemCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35209B2C7B1B9C007C825B /* FileSystemCache.swift */; };
+		4C35209E2C7B1BC4007C825B /* InMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35209D2C7B1BC4007C825B /* InMemoryCache.swift */; };
+		4C3520A02C7B21E1007C825B /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35209F2C7B21E1007C825B /* Preference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,10 @@
 		4C35208F2C7AF9A1007C825B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		4C3520912C7AFB77007C825B /* TodosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosManager.swift; sourceTree = "<group>"; };
 		4C3520932C7AFBB0007C825B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		4C3520952C7B1893007C825B /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		4C35209B2C7B1B9C007C825B /* FileSystemCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemCache.swift; sourceTree = "<group>"; };
+		4C35209D2C7B1BC4007C825B /* InMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCache.swift; sourceTree = "<group>"; };
+		4C35209F2C7B21E1007C825B /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +71,48 @@
 		4C3520872C7AF925007C825B /* TodosCLI */ = {
 			isa = PBXGroup;
 			children = (
+				4C35209A2C7B1B50007C825B /* Logic */,
+				4C3520992C7B1B24007C825B /* Model */,
+				4C3520982C7B1B13007C825B /* Cache */,
+				4C3520972C7B1AC1007C825B /* UI */,
 				4C3520882C7AF925007C825B /* main.swift */,
-				4C35208F2C7AF9A1007C825B /* Todo.swift */,
-				4C3520912C7AFB77007C825B /* TodosManager.swift */,
-				4C3520932C7AFBB0007C825B /* App.swift */,
 			);
 			path = TodosCLI;
+			sourceTree = "<group>";
+		};
+		4C3520972C7B1AC1007C825B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4C3520932C7AFBB0007C825B /* App.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4C3520982C7B1B13007C825B /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				4C3520952C7B1893007C825B /* Cache.swift */,
+				4C35209B2C7B1B9C007C825B /* FileSystemCache.swift */,
+				4C35209D2C7B1BC4007C825B /* InMemoryCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		4C3520992C7B1B24007C825B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C35208F2C7AF9A1007C825B /* Todo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C35209A2C7B1B50007C825B /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				4C3520912C7AFB77007C825B /* TodosManager.swift */,
+				4C35209F2C7B21E1007C825B /* Preference.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,9 +174,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3520892C7AF925007C825B /* main.swift in Sources */,
+				4C3520962C7B1893007C825B /* Cache.swift in Sources */,
 				4C3520942C7AFBB0007C825B /* App.swift in Sources */,
 				4C3520922C7AFB77007C825B /* TodosManager.swift in Sources */,
 				4C3520902C7AF9A1007C825B /* Todo.swift in Sources */,
+				4C35209C2C7B1B9C007C825B /* FileSystemCache.swift in Sources */,
+				4C3520A02C7B21E1007C825B /* Preference.swift in Sources */,
+				4C35209E2C7B1BC4007C825B /* InMemoryCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

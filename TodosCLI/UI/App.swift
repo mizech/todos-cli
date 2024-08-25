@@ -38,22 +38,23 @@ class App {
                         let title = readLine()
                         
                         if let title = title {
-                            todosManager.add(title: title)
+                            todosManager.addTodo(with: title)
                             print("Todo added!")
                         }
                     case Command.list.rawValue:
-                        todosManager.list()
+                        print("📝 Your Todos: ")
+                        todosManager.listTodos()
                     case Command.toggle.rawValue:
-                        todosManager.list()
+                        todosManager.listTodos()
                         let numb = requestNumber(operation: "toggle")
                         if numb != -1 {
-                            todosManager.toggle(number: numb)
+                            todosManager.toggleCompletion(forTodoAtIndex: numb - 1)
                         }
                     case Command.delete.rawValue:
-                        todosManager.list()
+                        todosManager.listTodos()
                         let numb = requestNumber(operation: "delete 🗑️")
                         if numb != -1 {
-                            todosManager.delete(number: numb)
+                            todosManager.deleteTodo(atIndex: numb - 1)
                         }
                     case Command.exit.rawValue:
                         print("👋 Thanks for using Todos-CLI! See you next time!")
