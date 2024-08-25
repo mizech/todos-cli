@@ -57,8 +57,7 @@ class App {
                             todosManager.deleteTodo(atIndex: numb - 1)
                         }
                     case Command.exit.rawValue:
-                        print("👋 Thanks for using Todos-CLI! See you next time!")
-                        break
+                        todosManager.exit()
                     default:
                         print("❗Option doesn't exist.")
                         break

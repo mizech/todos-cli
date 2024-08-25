@@ -52,4 +52,10 @@ class TodosManager {
         todos.remove(at: index)
         handleSaveResult(result: cache.save(todos: todos))
     }
+    
+    func exit() {
+        print("👋 Thanks for using Todos-CLI! See you next time!")
+        _SwiftConcurrencyShims.exit(1)
+    }
 }
+
