@@ -7,32 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "33FEF32B-0BB8-4948-8D02-39F5578D13FE"
+            uuid = "50E09660-257E-434E-8F5A-0F39ADBA2ACA"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TodosCLI/Cache/FileSystemCache.swift"
+            filePath = "TodosCLI/Logic/TodosManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "load()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "toggleCompletion(forTodoAtIndex:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4CA91FED-9548-4B3C-B3BE-7543D137C74F"
+            uuid = "2C7EB40F-A9FD-4A6C-8E92-67471616E60E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TodosCLI/Cache/FileSystemCache.swift"
+            filePath = "TodosCLI/Logic/TodosManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "load()"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "deleteTodo(atIndex:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D2FA0F4-2CCF-4B76-9D60-410F99598110"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodosCLI/Logic/TodosManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "deleteTodo(atIndex:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74D9938D-8E14-4E36-8D4D-F255958185BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodosCLI/Logic/TodosManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "deleteTodo(atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

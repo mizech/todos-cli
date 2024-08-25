@@ -5,7 +5,7 @@ class TodosManager {
     var cache: Cache
     var chosenCache: Preference
     
-    init(chosenCache: Preference = Preference.FileSystemCache) {
+    init(chosenCache: Preference = Preference.InMemoryCache) {
         self.chosenCache = chosenCache
         switch self.chosenCache {
             case .FileSystemCache:
@@ -28,16 +28,20 @@ class TodosManager {
     }
     
     func toggleCompletion(forTodoAtIndex index: Int) {
+        guard index > -1, index < self.todos.count else {
+            return
+        }
+        
         todos[index].isCompleted.toggle()
         cache.save(todos: todos)
     }
     
     func deleteTodo(atIndex index: Int) {
+        guard index > -1, index < self.todos.count else {
+            return
+        }
+        
         todos.remove(at: index)
         cache.save(todos: todos)
-    }
-    
-    func exit() {
-        
     }
 }
