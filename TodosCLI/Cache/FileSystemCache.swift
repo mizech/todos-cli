@@ -9,8 +9,8 @@ class FileSystemCache: Cache {
     func save(todos: [Todo]) {
         if let path = filePath {
             do {
-                let data = try JSONSerialization.data(withJSONObject: todos)
-                try data.write(to: path)
+                let json = try JSONEncoder().encode(todos)
+                try json.write(to: path)
             } catch {
                 print("Saving todos-array failed")
                 print(error)
@@ -22,7 +22,7 @@ class FileSystemCache: Cache {
         if let path = filePath {
             do {
                 let data = try Data(contentsOf: path)
-                let todos = try JSONSerialization.jsonObject(with: data) as? [Todo]
+                let todos = try JSONDecoder().decode([Todo].self, from: data)
                 
                 guard todos != nil else {
                     return []
