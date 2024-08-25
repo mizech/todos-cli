@@ -10,16 +10,16 @@ class TodosManager {
     func list() {
         print("Your Todos: ")
         for (i, todo) in todos.enumerated() {
-            print("\(i + 1). \(todo.title)")
+            print("\(i + 1). \(todo.isCompleted == true ? "✅" : "❌") \(todo.title)")
         }
     }
     
-    func toggle() {
-        
+    func toggle(number: Int) {
+        todos[number - 1].isCompleted.toggle()
     }
     
-    func delete(index: Int) {
-        todos.remove(at: index)
+    func delete(number: Int) {
+        todos.remove(at: number - 1)
     }
     
     func exit() {

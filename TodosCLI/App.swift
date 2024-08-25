@@ -11,6 +11,21 @@ class App {
         case exit = "exit"
     }
     
+    func requestNumber(operation: String) -> Int {
+        print("Enter the number of the todo to \(operation): ")
+        let oNumb = readLine()
+        
+        if let sNumb = oNumb {
+            let iNumb = Int(sNumb) ?? -1
+            guard iNumb != -1 else {
+                return -1
+            }
+            return iNumb
+        }
+        
+        return -1
+    }
+    
     func run() {
         print("Welcome to the Todo CLI!")
         while true {
@@ -29,23 +44,22 @@ class App {
                     case Command.list.rawValue:
                         todosManager.list()
                     case Command.toggle.rawValue:
-                        print("Toggle")
+                        todosManager.list()
+                        let numb = requestNumber(operation: "toggle")
+                        if numb != -1 {
+                            todosManager.toggle(number: numb)
+                        }
                     case Command.delete.rawValue:
                         todosManager.list()
-                        print("Enter the number of the todo to delete: ")
-                        let number = readLine()
-                        
-                        if let number = number {
-                            let index = Int(number) ?? -1
-                            guard index != -1 else {
-                                continue
-                            }
-                            todosManager.delete(index: index - 1)
+                        let numb = requestNumber(operation: "delete")
+                        if numb != -1 {
+                            todosManager.delete(number: numb)
                         }
                     case Command.exit.rawValue:
                         print("Thanks for using Todos-CLI! See you next time!")
                         break
                     default:
+                        print("Option doesn't exist.")
                         break
                 }
             } else {
