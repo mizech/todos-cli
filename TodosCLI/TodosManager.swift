@@ -18,8 +18,8 @@ class TodosManager {
         
     }
     
-    func delete() {
-        
+    func delete(index: Int) {
+        todos.remove(at: index)
     }
     
     func exit() {

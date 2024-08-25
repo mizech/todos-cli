@@ -31,7 +31,17 @@ class App {
                     case Command.toggle.rawValue:
                         print("Toggle")
                     case Command.delete.rawValue:
-                        print("Delete")
+                        todosManager.list()
+                        print("Enter the number of the todo to delete: ")
+                        let number = readLine()
+                        
+                        if let number = number {
+                            let index = Int(number) ?? -1
+                            guard index != -1 else {
+                                continue
+                            }
+                            todosManager.delete(index: index - 1)
+                        }
                     case Command.exit.rawValue:
                         print("Thanks for using Todos-CLI! See you next time!")
                         break
