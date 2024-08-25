@@ -6,16 +6,19 @@ class FileSystemCache: Cache {
             .first?.appending(path: "todos.json")
     }
     
-    func save(todos: [Todo]) {
+    func save(todos: [Todo]) -> Bool {
         if let path = filePath {
             do {
                 let json = try JSONEncoder().encode(todos)
                 try json.write(to: path)
+                return true
             } catch {
                 print("Saving todos-array failed")
                 print(error)
+                return false
             }
         }
+        return false
     }
     
     func load() -> [Todo]? {

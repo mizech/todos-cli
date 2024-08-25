@@ -1,6 +1,6 @@
 import Foundation
 
 protocol Cache {
-    func save(todos: [Todo])
+    func save(todos: [Todo]) -> Bool
     func load() -> [Todo]?
 }

@@ -16,9 +16,17 @@ class TodosManager {
         self.todos = self.cache.load() ?? []
     }
     
+    func handleSaveResult(result: Bool) {
+        if result == true {
+            print("Saved data to cache successful.")
+        } else {
+            print("Saving data to cache failed.")
+        }
+    }
+    
     func addTodo(with title: String) {
         todos.append(Todo(title: title))
-        cache.save(todos: todos)
+        handleSaveResult(result: cache.save(todos: todos))
     }
     
     func listTodos() {
@@ -33,7 +41,7 @@ class TodosManager {
         }
         
         todos[index].isCompleted.toggle()
-        cache.save(todos: todos)
+        handleSaveResult(result: cache.save(todos: todos))
     }
     
     func deleteTodo(atIndex index: Int) {
@@ -42,6 +50,6 @@ class TodosManager {
         }
         
         todos.remove(at: index)
-        cache.save(todos: todos)
+        handleSaveResult(result: cache.save(todos: todos))
     }
 }
