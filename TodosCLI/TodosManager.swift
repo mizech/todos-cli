@@ -5,6 +5,7 @@ class TodosManager {
     
     func add(title: String) {
         todos.append(Todo(title: title))
+        print(todos.last)
     }
     
     func list() {

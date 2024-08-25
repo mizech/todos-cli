@@ -31,7 +31,7 @@ class App {
         while true {
             print("What would you like to do? (add, list, toggle, delete, exit): ")
             let answer = readLine()
-            if let answer = answer {
+            if let answer = answer?.trimmingCharacters(in: .whitespacesAndNewlines) {
                 switch answer {
                     case Command.add.rawValue:
                         print("Enter todo-title: ")
