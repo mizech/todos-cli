@@ -1,11 +1,4 @@
-//
-//  main.swift
-//  TodosCLI
-//
-//  Created by Michael on 25.08.24.
-//
-
 import Foundation
 
-print("Hello, World!")
+print("Hello, World! \(3 + 4)")
 
