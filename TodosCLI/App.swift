@@ -27,14 +27,14 @@ class App {
     }
     
     func run() {
-        print("Welcome to the Todo CLI!")
+        print(" 🌟 Welcome to the Todo CLI! 🌟 ")
         while true {
             print("What would you like to do? (add, list, toggle, delete, exit): ")
             let answer = readLine()
             if let answer = answer?.trimmingCharacters(in: .whitespacesAndNewlines) {
                 switch answer {
                     case Command.add.rawValue:
-                        print("Enter todo-title: ")
+                        print("📌 Enter todo-title: ")
                         let title = readLine()
                         
                         if let title = title {
@@ -51,19 +51,19 @@ class App {
                         }
                     case Command.delete.rawValue:
                         todosManager.list()
-                        let numb = requestNumber(operation: "delete")
+                        let numb = requestNumber(operation: "delete 🗑️")
                         if numb != -1 {
                             todosManager.delete(number: numb)
                         }
                     case Command.exit.rawValue:
-                        print("Thanks for using Todos-CLI! See you next time!")
+                        print("👋 Thanks for using Todos-CLI! See you next time!")
                         break
                     default:
-                        print("Option doesn't exist.")
+                        print("❗Option doesn't exist.")
                         break
                 }
             } else {
-                print("Option doesn't exist.")
+                print("❗ Option doesn't exist.")
             }
         }
     }
