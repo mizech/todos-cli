@@ -1,6 +1,8 @@
 import Foundation
 
 class App {
+    let todosManager = TodosManager()
+    
     enum Command: String {
         case add = "add"
         case list = "list"
@@ -17,9 +19,15 @@ class App {
             if let answer = answer {
                 switch answer {
                     case Command.add.rawValue:
-                        print("ADD")
+                        print("Enter todo-title: ")
+                        let title = readLine()
+                        
+                        if let title = title {
+                            todosManager.add(title: title)
+                            print("Todo added!")
+                        }
                     case Command.list.rawValue:
-                        print("LIST")
+                        todosManager.list()
                     case Command.toggle.rawValue:
                         print("Toggle")
                     case Command.delete.rawValue:

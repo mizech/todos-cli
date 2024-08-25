@@ -8,7 +8,10 @@ class TodosManager {
     }
     
     func list() {
-        
+        print("Your Todos: ")
+        for (i, todo) in todos.enumerated() {
+            print("\(i + 1). \(todo.title)")
+        }
     }
     
     func toggle() {
