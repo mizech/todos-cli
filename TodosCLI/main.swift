@@ -1,4 +1,5 @@
 import Foundation
 
-print("Hello, World! \(3 + 4)")
+let app = App()
+app.run()
 

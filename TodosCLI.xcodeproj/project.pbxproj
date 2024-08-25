@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C3520892C7AF925007C825B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3520882C7AF925007C825B /* main.swift */; };
 		4C3520902C7AF9A1007C825B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35208F2C7AF9A1007C825B /* Todo.swift */; };
+		4C3520922C7AFB77007C825B /* TodosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3520912C7AFB77007C825B /* TodosManager.swift */; };
+		4C3520942C7AFBB0007C825B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3520932C7AFBB0007C825B /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		4C3520852C7AF925007C825B /* TodosCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TodosCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3520882C7AF925007C825B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4C35208F2C7AF9A1007C825B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		4C3520912C7AFB77007C825B /* TodosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosManager.swift; sourceTree = "<group>"; };
+		4C3520932C7AFBB0007C825B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			children = (
 				4C3520882C7AF925007C825B /* main.swift */,
 				4C35208F2C7AF9A1007C825B /* Todo.swift */,
+				4C3520912C7AFB77007C825B /* TodosManager.swift */,
+				4C3520932C7AFBB0007C825B /* App.swift */,
 			);
 			path = TodosCLI;
 			sourceTree = "<group>";
@@ -124,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3520892C7AF925007C825B /* main.swift in Sources */,
+				4C3520942C7AFBB0007C825B /* App.swift in Sources */,
+				4C3520922C7AFB77007C825B /* TodosManager.swift in Sources */,
 				4C3520902C7AF9A1007C825B /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
